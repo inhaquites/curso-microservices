@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace GeekShopping.ProductAPI
+namespace GeekShopping.Web
 {
     public class Program
     {

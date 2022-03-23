@@ -24,7 +24,7 @@ namespace GeekShopping.ProductAPI.Repository
         public async Task<IEnumerable<ProductDTO>> FindAll()
         {
             List<Product> products = await _context.Products.ToListAsync();
-            return  _mapper.Map<List<ProductDTO>>(products);
+            return _mapper.Map<List<ProductDTO>>(products);
         }
 
         public async Task<ProductDTO> FindById(long Id)
@@ -69,7 +69,7 @@ namespace GeekShopping.ProductAPI.Repository
             {
                 return false;
             }
-        }        
+        }
 
 
     }

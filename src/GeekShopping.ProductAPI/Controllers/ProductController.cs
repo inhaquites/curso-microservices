@@ -3,7 +3,6 @@ using GeekShopping.ProductAPI.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace GeekShopping.ProductAPI.Controllers
@@ -16,7 +15,7 @@ namespace GeekShopping.ProductAPI.Controllers
 
         public ProductController(IProductRepository repository)
         {
-            _repository = repository ?? throw new 
+            _repository = repository ?? throw new
                 ArgumentNullException(nameof(repository));
         }
 
