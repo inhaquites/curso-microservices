@@ -12,7 +12,7 @@ namespace GeekShopping.Web.Utils
         public static async Task<T> ReadContentAs<T>(this HttpResponseMessage response)
         {
             if (!response.IsSuccessStatusCode)
-                throw new ApplicationException($"Houve uma falha de comunicação com a API: " + 
+                throw new ApplicationException($"Houve uma falha de comunicação com a API: " +
                     $"{response.ReasonPhrase}");
 
             var DataAsString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -21,8 +21,8 @@ namespace GeekShopping.Web.Utils
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
 
-        public static Task<HttpResponseMessage> PostAsJson<T>(this HttpClient httpClient, 
-                                                              string url, 
+        public static Task<HttpResponseMessage> PostAsJson<T>(this HttpClient httpClient,
+                                                              string url,
                                                               T data)
         {
             var DataAsString = JsonSerializer.Serialize(data);

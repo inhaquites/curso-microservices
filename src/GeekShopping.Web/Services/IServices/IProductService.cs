@@ -19,3 +19,4 @@ namespace GeekShopping.Web.Services.IServices
         Task<bool> DeleteProductById(long id);
     }
 }
+

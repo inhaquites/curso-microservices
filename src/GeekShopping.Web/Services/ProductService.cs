@@ -35,7 +35,7 @@ namespace GeekShopping.Web.Services
             var response = await _client.PostAsJson(BasePath, model);
             if (response.IsSuccessStatusCode)
                 return await response.ReadContentAs<ProductModel>();
-            else 
+            else
                 throw new Exception("Houve uma falha de comunicação com a API.");
         }
 
